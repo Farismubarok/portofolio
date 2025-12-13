@@ -85,7 +85,7 @@ const DataKaryawan = () => {
             </div>
 
             {/* Pagination */}
-            <div className="pagination">
+            {/* <div className="pagination">
               <span>Menampilkan 1 - 8 dari 12 karyawan</span>
               <div className="page-controls">
                 <button className="page-btn"><ChevronLeft size={16} /></button>
@@ -93,7 +93,7 @@ const DataKaryawan = () => {
                 <button className="page-btn">2</button>
                 <button className="page-btn"><ChevronRight size={16} /></button>
               </div>
-            </div>
+            </div> */}
           </div>
         </div>
       </main>
