@@ -117,25 +117,25 @@ const Gaji = () => {
 
       {/* Stat Cards */}
       <div className="stats-container">
-        <div className="stat-card total-payroll">
+        <div className="stat-card_gaji total-payroll">
           <div className="stat-icon">💰</div>
           <p className="stat-label">Total Payroll</p>
           <h3 className="stat-value">{formatRupiah(totalPayroll)}</h3>
         </div>
 
-        <div className="stat-card sudah-dibayar">
+        <div className="stat-card_gaji sudah-dibayar">
           <div className="stat-icon">✓</div>
           <p className="stat-label">Sudah Dibayar</p>
           <h3 className="stat-value">{sudahDibayar}</h3>
         </div>
 
-        <div className="stat-card pending">
+        <div className="stat-card_gaji pending">
           <div className="stat-icon">⏳</div>
           <p className="stat-label">Pending</p>
           <h3 className="stat-value">{pending}</h3>
         </div>
 
-        <div className="stat-card rata-rata">
+        <div className="stat-card_gaji rata-rata">
           <div className="stat-icon">$</div>
           <p className="stat-label">Rata-rata Gaji</p>
           <h3 className="stat-value">{formatRupiah(rataRataGaji)}</h3>
@@ -167,6 +167,7 @@ const Gaji = () => {
               <th>Bonus</th>
               <th>Total</th>
               <th>Status</th>
+              <th>Aksi</th>
             </tr>
           </thead>
           <tbody>
@@ -195,6 +196,15 @@ const Gaji = () => {
                       <span className={`status-badge status-${sal.status_pembayaran?.toLowerCase().replace(' ', '-')}`}>
                         {sal.status_pembayaran}
                       </span>
+                    </td>
+                    <td className="action-cell">
+                      <button 
+                        className="btn-action edit"
+                        onClick={() => handleEditGaji(sal)}
+                        title="Edit"
+                      >
+                        Edit
+                      </button>
                     </td>
                   </tr>
                 );

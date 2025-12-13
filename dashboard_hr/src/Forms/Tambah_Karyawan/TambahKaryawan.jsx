@@ -55,7 +55,8 @@ const TambahKaryawan = ({ onClose, onSuccess }) => {
               </div>
               
               {/* Upload Foto Area */}
-              <div className="form-group full-width">
+              
+              {/* <div className="form-group full-width">
                 <label>Upload Foto Profil</label>
                 <div className="upload-box">
                   <div className="upload-placeholder">
@@ -64,7 +65,7 @@ const TambahKaryawan = ({ onClose, onSuccess }) => {
                     <small>Format: JPG, PNG. Maksimal 2MB</small>
                   </div>
                 </div>
-              </div>
+              </div> */}
             </div>
           )}
 

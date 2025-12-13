@@ -22,7 +22,10 @@ const DataKaryawan = () => {
   };
 
   useEffect(() => {
-    loadKaryawan();
+    const fetchData = async () => {
+      await loadKaryawan();
+    };
+    fetchData();
   }, []);
 
   // Handle hapus karyawan
@@ -44,7 +47,7 @@ const DataKaryawan = () => {
               <p className="page-subtitle">Kelola data dan informasi karyawan</p>
             </div>
             
-            <button className="btn-primary-data" onClick={() => setIsModalOpen(true)}>
+            <button className="btn-primary-data-karyawan" onClick={() => setIsModalOpen(true)}>
               + Tambah Karyawan
             </button>
           </div>
@@ -110,10 +113,17 @@ const DataKaryawan = () => {
               </table>
             </div>
 
-            {/* Pagination Tetap Sama */}
-            <div className="pagination">
-              {/* ... kode pagination ... */}
-            </div>
+            {/* Pagination */}
+            {/* <div className="pagination">
+              <span>Menampilkan 1 - 8 dari 12 karyawan</span>
+              <div className="page-controls">
+                <button className="page-btn"><ChevronLeft size={16} /></button>
+                <button className="page-btn active">1</button>
+                <button className="page-btn">2</button>
+                <button className="page-btn"><ChevronRight size={16} /></button>
+              </div>
+            </div> */}
+            
           </div>
         </div>
 

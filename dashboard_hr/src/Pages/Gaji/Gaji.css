@@ -46,7 +46,7 @@
     margin-bottom: 2rem;
 }
 
-.stat-card {
+.stat-card_gaji {
     padding: 1.5rem;
     border-radius: 8px;
     border: 1px solid #e5e7eb;
@@ -95,6 +95,15 @@
 
 .stat-card.rata-rata {
     border-left: 4px solid #a78bfa;
+}
+
+h3.stat-value {
+    font-size: 28px;
+    color: #2a60df;
+}
+p.stat-label {
+    font-size: 17px;
+    color: #4b5563;
 }
 
 /* --- Controls & Filters --- */
@@ -151,6 +160,8 @@
     cursor: pointer;
     font-weight: 600;
     transition: background-color 0.2s;
+    margin-right: 50px;
+    font-size: 16px;
 }
 
 .btn-primary-gaji:hover {
@@ -339,3 +350,4 @@
 .btn-action:hover {
     opacity: 0.8;
 }
+
